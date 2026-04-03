@@ -7,6 +7,7 @@ const links = [
   { href: "/", label: "Dashboard" },
   { href: "/assess", label: "Assess Risk" },
   { href: "/occupations", label: "Occupations" },
+  { href: "/compare", label: "Compare" },
   { href: "/methodology", label: "Methodology" },
 ];
 

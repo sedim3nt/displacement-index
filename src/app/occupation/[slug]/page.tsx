@@ -4,6 +4,7 @@ import { TrendingUp, TrendingDown, Minus, ArrowLeft, DollarSign, Users, Calendar
 import { occupations, getOccupationBySlug, getDriColor, getDriGrade } from "@/data/occupations";
 import DriHistoryChartWrapper from "@/components/charts/DriHistoryChartWrapper";
 import FactorChartWrapper from "@/components/charts/FactorChartWrapper";
+import SaferPaths from "@/components/SaferPaths";
 
 export function generateStaticParams() {
   return occupations.map((o) => ({ slug: o.slug }));
@@ -159,6 +160,9 @@ export default async function OccupationPage({ params }: { params: Promise<{ slu
             ))}
           </div>
         </div>
+
+        {/* Safer Paths — Career Geographer */}
+        <SaferPaths slug={occ.slug} title={occ.title} />
 
         {/* Events */}
         {occ.events.length > 0 && (
